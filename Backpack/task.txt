@@ -1,0 +1,18 @@
+We have unlimited suply of pears and apples. Each pear weights exactly a grams and each apple weights
+exactly b grams. We would like to put as many fruits as possible in the backpack, however total weight
+of fruits must not exceed limit n. Question is what is the maximum avilable total weight of fruits that we can still have.
+
+Input rules:
+First line is number of test cases (integer from at least 1 to 100). 
+Following lines contain 3 integer numbers a, b, n seperated by a space. 
+All these numbers are between (including) 0 and 2000000000.
+
+Output rules:
+For each test case write one line that contains only one integer which value is maximum available weight that we can achieve by combining pears and apples. This value must not exceed n.
+
+Example:
+
+Input		Output
+2		21
+8 5 22		99
+13 15 100
