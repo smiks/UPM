@@ -1,0 +1,14 @@
+Family is trying to decorate their Christmas tree. Each row on Christmas tree has 16 lights and each light can glow in red or blue color. Lights are working on their own special way. You can select how will first two rows glow but third row depends on selection of first two rows.
+
+
+Input rules:
+First line is number of patterns which are not greater than 365. Each pattern is followed by two series of 16 letters 'r' and 'b'. First series represents color of lights in third row, second series sets color combination in second row.
+
+Example:
+
+Input			Output
+2
+rrrrrrrrrrrrrrrr	mmmmmmmmmmmmmmmm
+mmmmmmmmmmmmmmmm	rrrrmmmmmmmmrrrr
+rrrrmmmmrrrrmmmm
+rrrrrrrrmmmmmmmm
