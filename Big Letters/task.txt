@@ -1,0 +1,50 @@
+The design studio has developed their own font. Why? This design studio works mainly on LED signs where is resolution low enough that it is worth making their own letters andtake care for a good appearance. There are some hardware limits though. All letters must have same size (monospaced).
+
+Design studio is having troubles now. The design studio staff suspects that someone copied their fonts. They even got bitmap signs of its competitors.
+
+Your task is to write a program that will determine whether signs are stolen or similar.
+
+Input rules:
+
+Input data contains up to 10 examples. Each test case starts with three integers.
+C - number of signs in font
+W - width (in columns)
+H - height (in rows)
+
+Next H lines contans C*W signs that represents letters in giving font.
+Letter description is made of sings '-' and '*' where '-' stands for turned off LED and '*' for turned on LED diode on the screen.
+
+The font description is followed by two integers Tw and Th.
+Tw - width of competitors screen
+Th - height of competitors screen.
+Tw is divisible by W
+Th is divisible by H
+
+Entry data is ended with thre zeros seperated with space (instead of C W and H).
+
+Example
+
+Input			Output
+3 4 3			Stolen
+*--*-**--*--		Similar
+-**--**-****
+*--*-**--*--
+8 6
+*--*-*--
+-**-****
+*--*-*--
+-**-*--*
+-**--**-
+-**-*--*
+3 4 3
+*--*-**--*--
+-**--**-****
+*--*-**--*--
+8 6
+*--*-*--
+-**-****
+*--*-*--
+-****--*
+-**--**-
+-**-*--*
+0 0 0
