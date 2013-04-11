@@ -1,18 +1,19 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Scanner;
  
 public class N1 {
  
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+    public static void main(String[] args) throws IOException {
          
-        String[] vr1 = sc.nextLine().split(" ");
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        String[] vr1 = br.readLine().split(" ");
          
         int N = Integer.parseInt(vr1[0]);
         int M = Integer.parseInt(vr1[1]);
-         
-        int C = Integer.parseInt(sc.nextLine());
+        int C = Integer.parseInt(br.readLine());
          
         ArrayList<HashMap<Integer, Integer>> hm = new ArrayList<HashMap<Integer, Integer>>();
         int[] best = new int[N];
@@ -22,15 +23,13 @@ public class N1 {
         }
  
         best[C] = 0;
-         
+          
         for(int i= 0; i < M; i++){
-            String[] vr = sc.nextLine().split(" ");
+            String[] vr = br.readLine().split(" ");
             int a = Integer.parseInt(vr[0]);
             int b = Integer.parseInt(vr[1]);
             int p = Integer.parseInt(vr[2]);
-            //hm.get(a).put(b, p);
             hm.get(b).put(a, p);
-            //System.out.println(a+" "+b+" "+p);
         }
          
         ArrayList<Integer> arr = new ArrayList<Integer>();
@@ -39,11 +38,10 @@ public class N1 {
             ArrayList<Integer> arb = new ArrayList<Integer>();
             for(int n : arr){
                 HashMap<Integer, Integer> tmp = hm.get(n);
-                for(int i : tmp.keySet()){
+                 for(int i : tmp.keySet()){
                     int d = tmp.get(i) + best[n];
                     if(d < best[i]){
-                        //System.out.println("i: " + i +" n: " + n + " tmp: " + tmp.get(i) + " best " + best[n]);
-                        arb.add(i);
+                         arb.add(i);
                         best[i] = d;
                     }
                 }
@@ -52,7 +50,6 @@ public class N1 {
         }
         for (int i : best) {
             System.out.println(i);
-        }
+         }
     }   
- 
 }

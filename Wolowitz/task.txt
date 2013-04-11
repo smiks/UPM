@@ -1,0 +1,27 @@
+TASK
+
+Write a program that calculates distance from friend (including Caltech) to Caltech.
+
+INPUT DATA
+
+First line has integers N and M where N is number of friends (including Caltech) and M is number of roads between them.
+Second line has Z which is Caltech's ID number.
+
+Next are M lines in format a,b,c
+where  a is ID number of friend where the road starts, b ID number of friend where the road ends and c is length of the road.
+
+OUTPUT DATA
+For each friend (including Caltech) prints distance to Caltech.
+
+EXAPLE
+
+INPUT	OUTPUT
+5 7	3
+1	0
+0 1 3	2
+0 4 3	6
+2 1 2	8
+2 0 1
+3 0 7
+3 2 4
+4 3 2
